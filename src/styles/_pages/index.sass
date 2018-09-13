@@ -1,0 +1,459 @@
+/////////////////////////////////
+// Phần body
+body
+	background-color: #000
+/////////////////////////////////
+// Phần Slider
+/////////////////////////////////
+.home_slider
+	.item
+		position: relative
+		img
+			width: 100%	
+		.title
+			text-align: center
+			+pad(2rem 0)
+			height: 100%
+			width: 100%
+			display: flex
+			align-items: center
+			h1
+				color: $sun-flower
+			p
+				color: lighten($sun-flower, 30%)
+			a
+				background: lighten(#000, 30%)
+				color: $whites
+				+fz(1.5rem)
+		+media-breakpoint-up(md)
+			img
+				box-shadow: 0 0 0 2px $border
+			.title
+				text-align: left
+				+pos(abs, 0 null null 0)
+				color: $whites
+				h1
+					+pad(null null 2rem null)
+					+fz(3rem)
+					font-family: "Lato"
+					color: rgb(255, 255, 255)
+				p
+					+fz(1.5rem)
+					font-family: "Lato"
+					color: rgb(255, 255, 255)
+					+lh(2rem)
+				a
+					background: $whites
+					color: #000
+					+fz(2rem)
+					&:hover
+						background: $sun-flower
+.home_banner1
+	+mar(1rem null)
+	position: relative
+	text-align: center
+	.text1
+		position: absolute
+		top: .5rem
+		h2
+			+fz(1rem)
+			background: #000
+			color: $whites
+			width: 110%
+			font-family: "Lato"
+	.text2
+		position: absolute
+		top: 1.7rem
+		p
+			+fz(.5rem)
+			background: $yellow
+			font-family: "Lato"
+			width: 120%
+	.owl-dots
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%)
+		.owl-dot
+			span
+				width: 1.5rem
+				height: .3rem
+				border-radius: 4px
+				background: yellow
+	+media-breakpoint-up(md)
+		+mar(3rem null null)
+		.text1
+			top: 2rem
+			h2
+				+fz(2rem)
+				font-family: "Lato"
+				
+		.text2
+			top: 4.4rem
+			p
+				+fz(1.2rem)
+				font-family: "Lato"
+		.owl-dots
+			top: 70%
+	+media-breakpoint-up(lg)
+		.text1
+			top: 3rem
+			h2
+				+fz(3.5rem)
+				font-family: "Lato"
+		.text2
+			top: 7rem
+			p
+				+fz(2rem)
+				+mar(.5rem null null)
+				font-family: "Lato"
+		.owl-dots
+			top: 80%
+		
+// Phần Shop máy khoan
+.home_shop
+	h3
+		color: $whites
+		+fz(1rem)
+		display: flex
+		justify-content: center
+		position: relative
+	.item
+		a
+			text-decoration: none
+		figure
+			+pad(1rem null)
+			.blockimg
+				overflow: hidden
+				img
+					width: 100%
+			figcaption
+				+mar(1rem null 0)
+				h2
+					+fz(1rem)
+					color: $vang
+				.price
+					color: $ngoc
+	+media-breakpoint-up(sm)
+		h3
+			+fz(1.5rem)
+		.item
+			figure
+				.blockimg
+					position: relative
+					img
+						filter: grayscale(100%)
+						transition: .5s all ease-in-out
+					&:before	
+						content: ''
+						display: block
+						width: 100%
+						height: 100%
+						position: absolute
+						z-index: 99
+						transition: .5s all ease-in-out
+				figcaption
+					h2,.price
+						transition: .5s all ease-in-out
+						color: $border		
+			&:hover
+				figure 
+					.blockimg
+						img 
+							filter: grayscale(0)
+						&:before
+							box-shadow: 0 0 0 5px $yellow inset
+					figcaption
+						h2
+							color: $yellow
+						.price
+							color: $ngoc
+	+media-breakpoint-up(md)
+		h3
+			+fz(2.5rem)
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 20%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				left: 1rem
+			&:after
+				content: ''
+				display: block
+				width: 20%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				right: 1rem
+	+media-breakpoint-up(lg)
+		h3
+			+fz(2.5rem)
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 30%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				left: 1rem
+			&:after
+				content: ''
+				display: block
+				width: 30%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				right: 1rem
+//Phần banner 2
+.home_banner2
+	.item
+		text-align: center
+		position: relative
+		a
+			text-decoration: none
+		figure
+			img
+				box-shadow: 0 0 0 5px $border
+				transition: .5s all ease-in-out
+		.text
+			h3
+				position: absolute
+				color: $whites
+				top: 50%
+				left: 13%
+				+fz(1.1rem)
+				background: #000
+				width: 13rem
+			p
+				position: absolute
+				color: #000
+				background: $yellow
+				top: 70%
+				left: 33%
+				+fz(.5rem)
+				width: 6rem
+		.sale
+			span
+				position: absolute
+				color: $yellow
+				background: #000
+				width: 2rem
+				height: 2rem
+				top: 10%
+				right: 5%
+				border-radius: 50%
+				+fz(.5rem)
+				text-transform: uppercase
+				+pad(.5rem null null)
+
+	+media-breakpoint-up(sm)
+		.item
+			.text
+				h3
+					+fz(1.8rem)
+					left: 25%
+					width: 20rem
+				p
+					+fz(1.1rem)
+					width: 13rem
+					top: 65%
+					left: 34.5%
+
+			figure
+				&:hover
+					img
+						box-shadow: 0 0 0 5px $yellow
+						transition: .5s all ease-in-out
+	+media-breakpoint-up(md)
+		.item
+			.text
+				h3
+					+fz(2.5rem)
+					left: 22%
+					width: 30rem
+				p
+					+fz(1.5rem)
+					width: 17rem
+					top: 63%
+					left: 35%
+			.sale
+				span
+					+fz(1rem)
+					width: 4rem
+					height: 4rem
+					background: #000
+					right: 3%
+	+media-breakpoint-up(lg)
+		.item
+			.text
+				h3
+					+fz(3rem)
+					left: 28%
+					top: 60%
+					width: 35rem
+					padding-bottom: 1.5rem
+				p
+					+fz(1.5rem)
+					width: 17rem
+					top: 72%
+					left: 39%
+			.sale
+				span
+					+fz(1.3rem)
+					width: 5rem
+					height: 5rem
+					background: #000
+					right: 3%
+// Hết phần banner 2
+.home_gay
+	+pad(2rem null null)
+	img
+		box-shadow: 0 0 0 3px $border
+		width: 100%
+		transition: .5s all ease-in-out
+	.title
+		color: $whites
+		+pad(3rem null null)
+		h3
+			background: lighten(#000, 20%)
+			box-shadow: 0 0 0 3px $yellow
+			+fz(1.5rem)
+			position: absolute
+			right: 50%
+			transform: translate(50%, -50%)
+			z-index: 9
+		p
+			box-shadow: 0 0 0 3px $yellow
+			+fz(1rem)
+			+pad(2rem 2rem)
+			position: relative
+	+media-breakpoint-up(md)
+		figure
+			overflow: hidden
+			box-shadow: 0 0 0 3px $border
+			transition: .5s all ease-in-out
+			&:hover
+				box-shadow: 0 0 0 3px $yellow
+				transition: .5s all ease-in-out
+				img
+					transform: scale(1.05)
+		.title
+			+pad(0rem null null)
+			h3
+				width: 70%
+				+fz(1.7rem)
+			p
+				height: 
+	+media-breakpoint-up(lg)
+		.title
+			h3
+				width: 50%
+			p
+				+pad(2.7rem)
+				+fz(1.4rem)
+	+media-breakpoint-up(xl)
+		.title
+			h3
+				+fz(2rem)
+			p
+				+pad(3.1rem)
+				+fz(1.7rem)
+//hết phần Gay
+.home_clients
+	+pad(2rem null)
+	h3
+		color: $whites
+		+fz(1rem)
+		display: flex
+		justify-content: center
+		position: relative
+	+media-breakpoint-up(sm)
+		h3
+			+fz(1.5rem)
+	+media-breakpoint-up(md)
+		h3
+			+fz(2.5rem)
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 20%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				left: 1rem
+			&:after
+				content: ''
+				display: block
+				width: 20%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				right: 1rem
+	+media-breakpoint-up(lg)
+		h3
+			+fz(2.5rem)
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: 30%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				left: 1rem
+			&:after
+				content: ''
+				display: block
+				width: 30%
+				height: .1rem
+				position: absolute
+				background: $border
+				top: 1.5rem
+				right: 1rem
+	.owl-carousel
+		+pad(1rem null null)
+		.owl-nav
+			button
+				width: 2rem
+				height: 2rem
+				background: $yellow
+		+media-breakpoint-up(sm)
+			.owl-nav
+				button
+					background: $border
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					&.owl-next
+						right: -3%
+					&.owl-prev
+						left: -3%
+					&:hover
+						background: $yellow
+			.item
+				img
+					filter: grayscale(100%)
+					&:hover
+						filter: grayscale(0%)
+
+
+		
+
+				
+
+				
+					
+					
+

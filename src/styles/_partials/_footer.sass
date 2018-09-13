@@ -1,0 +1,45 @@
+footer
+	background: darken($whites, 80%)
+	color: $whites
+	.link
+		+pad(2rem null)
+		h4
+			color: $yellow
+			text-transform: uppercase
+			+fz(1.5rem)
+			+mar(0 null 1.5rem)
+			line-height: 2rem
+		p
+			+pad(.5rem null null)
+			color: darken(#fff,30%)
+			line-height: 1rem
+		a
+			color: darken(#fff,30%)
+			line-height: 1rem
+	.copyright
+		background: $yellow
+		+pad(1rem null)
+		color: #000
+		.toan
+			background: #000
+			display: inline-block
+			+pad(3px)
+			input
+				background: none
+				border: 0
+				color: $whites
+				+pad(0rem .5rem)
+				&:focus
+					outline: none
+			button
+				background: $whites
+				border: 0
+				text-transform: uppercase
+				font-weight: bold
+				+fz(1rem)
+				line-height: 1.5rem
+				&:focus, &:hover
+					outline: none
+					background: $yellow
+					color: #000
+

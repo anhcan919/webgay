@@ -1,0 +1,30 @@
+<!-- ////////////// HEADER ////////////// -->
+header
+	.container
+		nav.navbar.navbar-expand-lg.navbar-light
+			a.navbar-brand(href="#") 
+				img(src="./img/logo.png", alt="Logo")
+
+			//- Đây là nút sẽ hiển thị trong mobile
+			button.navbar-toggler(type="button" data-toggle="collapse" data-target="#fullStackMenu" aria-controls="fullStackMenu" aria-expanded="false" aria-label="Toggle navigation")
+				span.fa.fa-bars
+			#fullStackMenu.collapse.navbar-collapse
+
+				//- Thuộc tính '.ml-auto' này sẽ đẩy me nu về bên phải 
+				ul.navbar-nav.ml-auto
+					li.nav-item
+						a.nav-link(href="#") My Account
+					li.nav-item
+						a.nav-link(href="#") Check Gift
+					li.nav-item
+						a.nav-link(href="#") CardMy
+					li.nav-item
+						a.nav-link(href="#") Wishlist
+					li.nav-item
+						a.nav-link(href="#") The Different
+					li.nav-item
+						a.nav-link(href="#") Career
+					li.nav-item
+						a.nav-link(href="#") Checkout
+	
+<!-- ////////////// HEADER ////////////// -->
